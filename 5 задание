@@ -1,0 +1,11 @@
+import 'dart:io';
+
+void main()
+{
+var home = ['bathroom', 'bedroom', 'kidsroom'];
+home.add('0,Start');
+home.add('End');
+int length = home.length;
+print(length);
+}
+
