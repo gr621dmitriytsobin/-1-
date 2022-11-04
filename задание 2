@@ -1,0 +1,33 @@
+
+
+import "dart:io"; 
+import "dart:math"; 
+
+void main(List<String> args) { 
+int  work = 1; 
+int summa = 1; 
+int mean = 0; 
+var nums = [1]; 
+print(nums); 
+for (int d = 0; d < nums.length; d++)
+ { 
+print("Добавьте число в список: "); 
+int d = int.parse(stdin.readLineSync()!); 
+summa += d; 
+if (d != 0)
+ { 
+mean++; 
+work *= d; 
+nums.add(d); 
+print(nums); 
+} 
+else 
+{ 
+print("Пока - пока"); 
+break; 
+} 
+print("Произведение - $work"); 
+print("Сумма - $summa"); 
+print("Среднее - $mean"); 
+} 
+}
