@@ -1,4 +1,4 @@
-/// 1 задание 
+
 
 import "dart:math"; 
 void main(List<String> arguments) 
