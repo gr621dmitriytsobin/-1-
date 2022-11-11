@@ -55,3 +55,30 @@ for (int i = 0; i < nums.length; i++) {
 }
 print(sum);
 }
+
+// задание 2
+
+
+
+import 'dart:io';
+import 'dart:math';
+
+void main() {
+ var numstask2 = File("C:/Users/Dmitry/Desktop/numsTask2.txt");
+ var content = numstask2.readAsStringSync();
+List<String> nums = content.split(";");
+print(nums);
+bool isSorted = false;
+while (!isSorted) {
+ isSorted = true;
+for (int i = 0; i < nums.length - 1; i++) {
+if (double.parse(nums[i]) > double.parse(nums[i + 1])) {
+ var ver = nums[i];
+ nums[i] = nums[i + 1];
+ nums[i + 1] = ver;
+isSorted = false;
+}
+ }
+ }
+numstask2.writeAsStringSync(nums.toString());
+}
