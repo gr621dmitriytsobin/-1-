@@ -1,0 +1,34 @@
+
+/// задание 1
+
+import 'dart:io';
+import 'dart:math';
+
+void main() {
+var numstask1 = File("C:/Users/Dmitry/Desktop/Новый текстовый документ.txt");
+var content = numstask1.readAsStringSync();
+List<String> nums = content.split(" ");
+int work = 1;
+int min = 1;
+int minIndex = 0;
+for (int i = 0; i < nums.length; i++)
+{
+if (int.parse(nums[i]) < min) 
+{
+min = int.parse(nums[i]);
+minIndex = i;
+} 
+else
+{
+continue;
+}
+}
+for (int i = minIndex; i < nums.length; i++) 
+{
+work *= int.parse(nums[i]);
+}
+print(work);
+}
+
+/// задание 2
+
