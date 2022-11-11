@@ -1,0 +1,122 @@
+/// 1 задание
+
+import "dart:math"; 
+void main(List<String> arguments) 
+{ 
+int min = -10; 
+int max = 10; 
+int minValue = 0; 
+List<int> nums = List.generate(10, (w) => min + Random().nextInt(max - min)); 
+print(nums.join(", ")); 
+for (int i = 0; i < 10; i++) 
+{ 
+if (nums[i] < minValue) 
+{ 
+minValue = nums[i]; 
+} 
+} 
+print("$minValue"); 
+}
+
+
+/// 2 задание 
+
+import "dart:io"; 
+import "dart:math"; 
+
+void main(List<String> args) { 
+int  work = 1; 
+int summa = 1; 
+int mean = 0; 
+var nums = [1]; 
+print(nums); 
+for (int d = 0; d < nums.length; d++)
+ { 
+print("Добавьте число в список: "); 
+int d = int.parse(stdin.readLineSync()!); 
+summa += d; 
+if (d != 0)
+ { 
+mean++; 
+work *= d; 
+nums.add(d); 
+print(nums); 
+} 
+else 
+{ 
+print("Пока - пока"); 
+break; 
+} 
+print("Произведение - $work"); 
+print("Сумма - $summa"); 
+print("Среднее - $mean"); 
+} 
+}
+
+
+/// 3 задание
+
+import "dart:io"; 
+import "dart:math"; 
+
+void main(List<String> args) 
+{ 
+int  largeValue = 1; 
+int smallestValue = 1;  
+var nums = [1]; 
+print(nums); 
+for (int i = 0; i < nums.length; i++)
+{ 
+print("Добавьте новые элементы в список: "); 
+int i = int.parse(stdin.readLineSync()!); 
+smallestValue = i; 
+if ( i != 0)
+{ 
+largeValue += i; 
+nums.add(i); 
+print(nums); 
+} 
+else 
+{ 
+print(" "); 
+break; 
+} 
+print("Самый короткий элемент списка - $smallestValue"); 
+print("Самый длинный элемент списка - $largeValue");  
+} 
+}
+
+
+// задание 4
+
+import 'dart:io';
+
+void main(List<String> args) 
+{
+List<int> nums = [];
+print("Ввести начало диапозона ");
+int a = int.parse(stdin.readLineSync()!);
+print("Ввести конец диапозона ");
+int b = int.parse(stdin.readLineSync()!);
+for(int i = 0; i < 15; i++) 
+{
+  nums.add((b - a));
+}
+for(int i = 0; i < nums.length; i++)
+{
+stdout.write("${nums[i]} ");
+}
+
+// задание 5
+
+import 'dart:io';
+
+void main()
+{
+var home = ['bathroom', 'bedroom', 'kidsroom'];
+home.add('0,Start');
+home.add('End');
+int length = home.length;
+print(length);
+}
+
