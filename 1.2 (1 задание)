@@ -1,9 +1,0 @@
-import 'dart:math';
-void main(List<String> args) { 
- var List  = [];
-for(int i = 100;  i > 0; i = i - 3 ) 
-{
-List.add(i);
-}
-stdout.write(List);
-}
